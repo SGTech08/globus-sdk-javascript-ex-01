@@ -56,7 +56,7 @@
           /**
            * Your registered Globus Application client ID.
            */
-          client: client_id,
+          client: "f6cffaff-1ea7-49d5-afca-bca745cbcc25",
           /**
            * The redirect URL for your application.
            * This URL should also be added to your Globus Application configuration.
@@ -145,8 +145,8 @@
 	  };
           request.onloadend = function() {
             if(request.status == 403) {
-		console.log('Not authorized for the data, got a 403');
-		UI.USER_INFO.innerText = `${manager.user.name}, you are not authorized to load the data. Did you join the the Serverless Data Users Globus Group?`;
+		console.log('Not authorized for the data, got a 403 Login Error');
+		UI.USER_INFO.innerText = `${manager.user.name}, you are not authorized to load the data. Did you join the the Serverless Data Users Globus Group? If not Join Here:`;
       		UI.CHART.style.display = 'none';
 		UI.CANVAS.style.display = 'none';
 	    };
